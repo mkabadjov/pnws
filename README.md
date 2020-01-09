@@ -48,8 +48,7 @@ SegmentationScorer scorer = new SegmenterFactory().createSegmentationScorer(unig
 Segmenter segmenter = new SegmenterFactory().createSegmenter(Segmenter.type.NORVIG, splitter, scorer);
 ```
 
-Please see class TaggerTest for more details on how to create the operationConfig and channelSettings objects for the fast stats.
-A Confluence page on the TM Tagger comming soon.
+Please see class SegmenterTest for more examples on usage.
 
 
 ## Contributing
