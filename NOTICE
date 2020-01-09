@@ -1,0 +1,10 @@
+Dent-in PNWS
+Copyright 2020 Dent-in Tech Solutions
+
+This product includes software developed at
+Dent-in Tech Solutions (http://www.dent-intech.com/).
+
+This is effectively our own Java implementation of
+Peter Norvig's Word Segmentation algorithm described in the
+chapter Natural Language Corpus Data from the book Beautiful Data
+(https://norvig.com/ngrams/).
