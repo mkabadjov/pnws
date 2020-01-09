@@ -42,8 +42,10 @@ mvn install
 #### Word Segmenter
 ```java
 
-//TODO: see SegmenterTest for usage.
-Tagger tagger = new TaggerFactory().createInstance(operationConfig, channelSettings);
+//no need for corpus lexicon in the splitter (i.e., 2nd parameter)
+Splitter splitter = new SegmenterFactory().createSplitter(Splitter.type.EXHAUSTIVE, null);
+SegmentationScorer scorer = new SegmenterFactory().createSegmentationScorer(unigramDataFileName, bigramDataFileName, totalNumberOfTokens, SegmentationScorer.type.BAYES_UNIGRAM);
+Segmenter segmenter = new SegmenterFactory().createSegmenter(Segmenter.type.NORVIG, splitter, scorer);
 ```
 
 Please see class TaggerTest for more details on how to create the operationConfig and channelSettings objects for the fast stats.
