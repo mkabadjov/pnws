@@ -146,7 +146,7 @@ public class DefaultTokenizer implements Tokenizer {
     /**
      * Tokenizes a given string, practical for tokenizing trademarks.
      *
-     * @param inputString
+     * @param inputString The input string
      * @return Returns the list of tokens
      */
     public List<Token> tokenize(String inputString) {

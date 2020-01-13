@@ -26,7 +26,7 @@ public class LexiconFactory {
     /**
      * Creates a default Lexicon.
      *
-     * @return
+     * @return The newly created lexicon
      */
     public Lexicon createInstance() throws UnsupportedLexiconException {
         return createInstance(Lexicon.TYPE.DEFAULT);
@@ -36,7 +36,7 @@ public class LexiconFactory {
      * Creates specialized Lexicon based on the type given.
      *
      * @param type The type of Lexicon to be created
-     * @return
+     * @return The newly created lexicon
      */
     public Lexicon createInstance(Lexicon.TYPE type) throws UnsupportedLexiconException {
         Lexicon lexicon = null;

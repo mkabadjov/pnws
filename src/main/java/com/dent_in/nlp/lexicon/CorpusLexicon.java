@@ -23,20 +23,20 @@ public interface CorpusLexicon extends Lexicon {
 
     /**
      * Returns the total of all frequencies in the lexicon.
-     * @return
+     * @return The size of the corpus (i.e., total number of tokens)
      */
     public Long getCorpusSize();
 
     /**
      * Returns the frequency of a token in the corpus.
-     * @param token
-     * @return
+     * @param token The query token
+     * @return The frequency for the token in the corpus
      */
     public Long getFrequency(String token);
 
     /**
      * Returns a Map of {word, frequency} representing the whole corpus.
-     * @return
+     * @return The Map of {word, frequency} representing the whole corpus.
      */
     public Map<String, Long> getFrequencies();
 

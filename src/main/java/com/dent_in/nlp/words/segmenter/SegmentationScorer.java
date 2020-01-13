@@ -42,10 +42,12 @@ public interface SegmentationScorer {
 
     /**
      *
-     * Here features has been externalised in order to handle properly the mophing feature.
+     * Here features has been externalised in order to handle properly the morphing feature.
      * Morphing of the input string is external to the segmentation, hence, the need for passing it on explicitly.
      *
      * Computes a score for a sequence of AnnotatedTerms (e.g., Bayes unigram or bigram probability, other score by supervised learning, etc.).
+     *
+     * @param features The input features (e.g., for a classifier or a regressor)
      * @return The Bayes probability for the given sequence of words
      */
     public double score(double [] features);

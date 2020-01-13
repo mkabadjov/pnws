@@ -93,9 +93,9 @@ public class ProbabilityDistribution {
     /**
      * Estimate the probability of an unknown word.
      *
-     * @param word
-     * @param penalizeLongWords
-     * @return
+     * @param word The query word
+     * @param penalizeLongWords True if long words should not be allowed to score high, false otherwise
+     * @return The probability of an unknown word
      */
     public double getProbabilityOfUnknownWord(String word, boolean penalizeLongWords) {
         double result = 0.0;
@@ -113,7 +113,8 @@ public class ProbabilityDistribution {
     /**
      * The Naive Bayes probability of a sequence of words - based on a unigram model (i.e., for Peter Norvig's first version of segment()).
      *
-     * @return
+     * @param words The input sequence of words
+     * @return The probability of a sequence of words
      */
     public double getProbability(String [] words){
         //safeguard, return 0.0 if words is empty
@@ -129,7 +130,8 @@ public class ProbabilityDistribution {
      * The Naive Bayes log-probability of a sequence of words - based on a unigram model
      * (more efficient and safer - i.e., avoids underflows problems - to do sums of log-probabilities than product of probabilities).
      *
-     * @return
+     * @param words The input sequence of words
+     * @return The log-probability of a sequence of words
      */
     public double getLogProbability(String [] words){
         //safeguard, return 0.0 if words is empty
@@ -144,7 +146,8 @@ public class ProbabilityDistribution {
     /**
      * The Naive Bayes probability of a sequence of words - based on a bigram model (i.e., for Peter Norvig's 2nd version of segment2()).
      *
-     * @return
+     * @param words The input sequence of words
+     * @return The probability of a sequence of words based ona bigram model
      */
     public double getProbability2(String [] words){
         //safeguard, return 0.0 if words is empty
@@ -162,7 +165,8 @@ public class ProbabilityDistribution {
      * The Naive Bayes log-probability of a sequence of words - based on a bigram model
      * (more efficient and safer to do sums of log-probabilities than product of probabilities).
      *
-     * @return
+     * @param words The input sequence of words
+     * @return The log-probability of a sequence of words based ona bigram model
      */
     public double getLogProbability2(String [] words){
         //safeguard, return 0.0 if words is empty
@@ -179,7 +183,9 @@ public class ProbabilityDistribution {
     /**
      * The Naive Bayes probability of a sequence of words.
      *
-     * @return
+     * @param lexicon The lexicon to use to compute the probabilities
+     * @param words The input sequence of words
+     * @return The Naive Bayes probability of a sequence of words
      */
     public double getProbability(CorpusLexicon lexicon, String [] words){
         //safeguard, return 0.0 if words is empty
@@ -194,7 +200,9 @@ public class ProbabilityDistribution {
     /**
      * The Naive Bayes probability of a sequence of words.
      *
-     * @return
+     * @param lexicon The lexicon to use to compute the probabilities
+     * @param words The input sequence of words
+     * @return The log-probability of a sequence of words
      */
     public double getLogProbability(CorpusLexicon lexicon, String [] words){
         //safeguard, return 0.0 if words is empty
@@ -208,7 +216,11 @@ public class ProbabilityDistribution {
 
     /**
      * The probability estimate of a word based on n-gram count data.
-     * @return
+     *
+     * @param lexicon The lexicon to use to compute the probabilities
+     * @param ngram The query ngram
+     * @param penalizeLongWords True if long words should be penalized, false otherwise
+     * @return The probability of the ngram
      */
     public double getProbability(CorpusLexicon lexicon, String ngram, boolean penalizeLongWords){
         double result = 0.0;
@@ -222,9 +234,9 @@ public class ProbabilityDistribution {
 
     /**
      * The probability estimate of a word based on unigram count data by penalizing unknown words that are long.
-     * @param lexicon
-     * @param ngram
-     * @return
+     * @param lexicon The lexicon to use to compute the probabilities
+     * @param ngram The query ngram
+     * @return The probability of the ngram (long words penalized)
      */
     public double getProbability(CorpusLexicon lexicon, String ngram){
         return getProbability(lexicon, ngram, true);
@@ -233,9 +245,9 @@ public class ProbabilityDistribution {
     /**
      * Conditional probability of word, given previous word.
      *
-     * @param word
-     * @param previousWord
-     * @return
+     * @param word The query word
+     * @param previousWord The previous word
+     * @return The conditional probability of the word given the previous word
      */
     public double getConditionalProbability(String word, String previousWord) {
         double result = 0.0;

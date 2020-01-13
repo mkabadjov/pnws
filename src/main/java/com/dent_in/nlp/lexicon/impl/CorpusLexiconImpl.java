@@ -109,9 +109,9 @@ public class CorpusLexiconImpl extends AbstractLexicon
     }
 
     /**
-     * Returns a map of the word->frequency pairs.
+     * Returns a map of the {word, frequency} pairs.
      *
-     * @return A map of the word->frequency pairs
+     * @return A map of the {word, frequency} pairs
      */
     public Map<String, Long> getFrequencies() {
         return this.wordFrequencies;

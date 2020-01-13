@@ -40,7 +40,7 @@ public class NgramCorpusLexiconImpl extends CorpusLexiconImpl
 
     /**
      * Returns the value of n of this n-gram corpus lexicon.
-     * @return
+     * @return The value of n of this n-gram corpus lexicon
      */
     public NGRAMSIZE getNgramSize() {
         return this.nsize;

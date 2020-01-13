@@ -29,20 +29,20 @@ public interface Lexicon {
      * This in place of public Integer getSize();
      *
      * Returns all the entries (i.e., token types) in the lexicon.
-     * @return
+     * @return Ths size of the vocabulary (i.e., number of unique tokens)
      */
     public Long getVocabularySize();
 
     /**
      *
-     * @param word
-     * @return
+     * @param word The query word
+     * @return True if the work is contained in this lexicon, false otherwise
      */
     public Boolean containsWord(String word);
 
     /**
      * XXX: It might be better (or in addition to) to provide an Iterator over the Collection of words.
-     * @return
+     * @return The lexicon as a set of words
      */
     public Set<String> getWords();
 

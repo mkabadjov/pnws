@@ -22,9 +22,9 @@ public abstract class AbstractLexicon implements Lexicon {
     private Lexicon.TYPE type = TYPE.DEFAULT;
 
     /**
-     * Returns the type of this lexicon.
+     * All lexicons must have a type.
      *
-     * @return
+     * @return Returns the type of this lexicon
      */
     public Lexicon.TYPE getType() {
         return this.type;
@@ -33,7 +33,7 @@ public abstract class AbstractLexicon implements Lexicon {
     /**
      * Sets the type of this lexicon.
      *
-     * @param type
+     * @param type The type of this lexicon
      */
     public void setType(Lexicon.TYPE type) {
         this.type =type;

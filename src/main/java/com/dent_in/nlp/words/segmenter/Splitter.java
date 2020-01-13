@@ -40,8 +40,9 @@ public interface Splitter {
 
     /**
      * Returns all dictionary entries coming out of the Aho-Corasick algorithm.
-     * @param string
-     * @return
+     *
+     * @param string The input string
+     * @return All dictionary entries identified by the Aho-Corasick algorithm
      */
     List<Token> ahocIndex(String string);
 

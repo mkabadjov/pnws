@@ -24,9 +24,9 @@ public interface DictionaryLexicon extends Lexicon {
 
 
     /**
-     * Returns the definition for a give word.
-     * @param word
-     * @return
+     * Returns the definition for a given word.
+     * @param word The query word
+     * @return The definition for the word
      */
     public List<? extends LexicalEntry> getDefinition(String word);
 
@@ -34,56 +34,57 @@ public interface DictionaryLexicon extends Lexicon {
      * Returns a Map {word, definition} for all words.
      * XXX: But isn't a definition mapping one-to-one with a word sense?
      *
-     * @return
+     * @return The Map {word, definition} for all words
      */
     public Map<String, List<? extends LexicalEntry>> getDefinitions();
 
 
     /**
      * Returns all the senses for a given word.
-     * @param word
-     * @return
+     * @param word The query word
+     * @return All the senses for a given word
      */
     public List<String> getSenses(String word);
 
     /**
      * Returns a Map {word, [senses]} for all words.
-     * @return
+     * @return A Map {word, [senses]} for all words.
      */
     public Map<String, List<String>> getSenses();
 
 
     /**
      * Returns the translations in a specific language for a given word.
-     * @param word
-     * @return
+     * @param word The query word
+     * @param languageID The language of interest
+     * @return The translations in a specific language for a given word
      */
     public List<? extends LexicalEntry> getTranslations(String word, String languageID);
 
     /**
      * Returns the translations in all languages for a given word.
      * The keys in the maps are the language IDs.
-     * @param word
-     * @return
+     * @param word The query word
+     * @return The translations in all languages for a given word
      */
     public Map<String, List<? extends LexicalEntry>> getTranslations(String word);
 
     /**
      * Returns the translations in all languages for all words.
-     * @return
+     * @return The translations in all languages for all words
      */
     public Map<String, Map<String, List<? extends LexicalEntry>>> getTranslations();
 
     /**
      * Returns phonetic representation of a given word according to the International Phonetics Alphabet (IPA).
-     * @param word
-     * @return
+     * @param word The query word
+     * @return The phonetic representation for the word
      */
     public List<? extends LexicalEntry> getPhoneticSymbol(String word);
 
     /**
      * Returns phonetic representations of all words
-     * @return
+     * @return The phonetic representations of all words
      */
     public Map<String, List<LexicalEntry>> getPhoneticSymbols();
 }

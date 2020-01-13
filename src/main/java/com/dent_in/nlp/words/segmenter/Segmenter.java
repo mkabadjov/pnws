@@ -24,7 +24,7 @@ import java.util.Set;
  * This is an interface which defines two key methods of a word segmenter:
  * 1. segment()
  *    returns either a list of plausible segmentations or the best segmentation of such a list
- *    according to a given maximazation function (e.g., Bayesian probability) for a given input string
+ *    according to a given maximization function (e.g., Bayesian probability) for a given input string
  *    That is, one segmentation splits the string in one or more places, or even none (e.g., ac+cur+ex).
  * 2. split()
  *    returns a list of plausible binary splits for an input string (i.e., one split splits the string in exactly one place; e.g., a+ccurex).
@@ -62,10 +62,10 @@ public interface Segmenter {
 
 
     /**
-     * Returns a segmentaiton of overlapping dictionary terms returned by the Aho-Corasick algorithm.
+     * Returns a segmentation of overlapping dictionary terms returned by the Aho-Corasick algorithm.
      *
-     * @param term
-     * @return
+     * @param term The query term
+     * @return A segmentation of overlapping dictionary terms returned by the Aho-Corasick algorithm
      */
     Segmentation getAhocTermsSegmentation(String term);
 

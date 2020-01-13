@@ -159,9 +159,9 @@ public class LexiconReader {
      * the convention used by Peter Norvig in his word segmentation algorithm that
      * uses recourses extracted from the Google ngram corpus.
      *
-     * @param path
-     * @param lexicon
-     * @param encoding
+     * @param path The path to the input file containing a lexicon
+     * @param lexicon The lexicon into which the input file will be loaded
+     * @param encoding The encoding to use when reading the input file
      */
     public static void loadNgramCorpusLexicon(Path path, Lexicon lexicon, Charset encoding) {
         Map<String, Long> mapWordFrequencies = (Map<String, Long>)lexicon.getBackBone();
